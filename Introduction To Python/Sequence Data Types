@@ -1,0 +1,188 @@
+/
+* -- coding: utf-8 -- * *@author: GITAA *
+Sequence data type
+Strings - Sequence of characters - " (or) '
+Tuples - Sequence of compound data - ()
+Lists - Sequence of multi-data type objects - []
+Arrays - Sequence of constrained list of objects (all objects of same datatype)
+ - using array module from array package
+Dictionary- Sequence of key-value pairs - {}
+Sets - Sequence of unordered collection of unique data
+Range - Used for looping - using built-in range( )
+These can offer unique functionalities for the variables to contain and handle more than one data datatype at a time
+Supports operations such as indexing, slicing, concatenation, multiplication etc.,
+Sequence object initialization
+In [ ]:
+In [ ]:
+In [ ]:
+strSample = 'learning' # string 
+lstNumbers = [1, 2, 3, 3, 3, 4, 5] # list with numbers 
+ # (having duplicate values)
+print(lstNumbers) 
+lstSample = [1,2,'a','sam',2] # list with mixed data types 
+print(lstSample) # (Having numbers and strings) 
+/
+In [ ]:
+In [ ]:
+In [ ]:
+In [ ]:
+In [ ]:
+In [ ]:
+from array import * # importing array module
+arrSample = array('i',[1,2,3,4]) # array
+for x in arrSample: print(x) # printing values of array
+The data types mentioned below can be used in creating an array of different data types.
+Code Python Type Min bytes 
+===============================
+'b' int 1
+'B' int 1
+'u' Unicode 2
+'h' int 2
+'H' int 2
+'i' int 2
+'I' int 2
+'l' int 4
+'L' int 4
+'f' float 4
+'d' float 8
+tupSample = (1,2,3,4,3,'py') # tuple 
+tupleSample = 1, 2, 'sample' # tuple packing
+print(tupleSample)
+dictSample = {1:'first', 'second':2, 3:3, 'four':'4'} # dictionary
+# Creating dictionary using 'dict' keyword
+dict_list = dict([('first', 1), ('second', 2), ('four', 4)])
+dict_list
+setSample = {'example',24,87.5,'data',24,'data'} # set
+setSample
+/
+In [ ]:
+Sequence data operations: Indexing
+Indexing just means accessing elements. To access elements, the square brackets can be used. There are many methods to access elements in python.
+index() method finds the first occurrence of the specified value and returns its position
+Syntax: object.index(sub[, start[, end]] ), object[index]
+Index of the element is used to access an element from ordered sequences
+The index starts from 0
+Negative indexing is used to access elements from the end of a list
+In negative indexing, the last element of a list has the index -1
+String: Indexing
+In [2]:
+In [3]:
+In [4]:
+Out[3]: 0
+Out[4]: 4
+rangeSample= range(1,12,4) # built-in sequence type used for looping 
+print(rangeSample) 
+ 
+for x in rangeSample: print(x) # print the values of 'rangeSample'
+strSample = 'learning' # string 
+strSample.index('l') # to find the index of substring 'l' from the string 'learning' 
+strSample.index('ning') # to find the index of substring 'ning' from the string 'learning' 
+
+Syntax: list_name.index(element, start, end)
+
+Traceback (most recent call last):
+ File "<ipython-input-8-dd2637980702>", line 1, in <module>
+ strSample[-9] # IndexError: string index out of range
+IndexError: string index out of range
+Out[11]: 3
+Out[12]: 'a'
+strSample[7] # to find the substring corresponds to 8th position
+strSample[-2] # to find the substring corresponds to 2nd last position
+strSample[-9] # IndexError: string index out of range
+lstSample = [1,2,'a','sam',2] # list
+lstSample.index('sam') # to find the index of element 'sam'
+lstSample[2] # to find the element corresponds to 3rd position
+/
+In [13]:
+Array: Indexing
+
+Tuple: Indexing
+lstSample[-1] # to find the last element in the list
+from array import * # importing array module
+arrSample = array('i',[1,2,3,4])# array with integer type
+for x in arrSample: print(x) # printing the values of 'arrSample'
+arrSample[-3] # to find the 3rd last element from 'arrSample'
+tupSample = (1,2,3,4,3,'py') # tuple
+tupSample.index('py') # to find the position of the element 'py'
+tupSample[2] # to find the 3rd element of the 'tupSample'
+/
+Set: Indexing
+
+Dictionary: Indexing
+The Python Dictionary object provides a key: value indexing facility
+The values in the dictionary are indexed by keys, they are not held in any order
+
+Traceback (most recent call last):
+ File "<ipython-input-25-b907ea72430f>", line 1, in <module>
+ setSample[4] # TypeError: 'set' object does not support indexing
+TypeError: 'set' object is not subscriptable
+Traceback (most recent call last):
+ File "<ipython-input-28-29139fb75065>", line 1, in <module>
+ dictSample[2] # KeyError: 2 - indexing by values is not applicable in dictionary
+KeyError: 2
+Out[29]: 'first'
+setSample = {'example',24,87.5,'data',24,'data'} # sets
+setSample[4] # TypeError: 'set' object does not support indexing 
+dictSample = {1:'first', 'second':2, 3:3, 'four':'4'} # dictionary
+dictSample[2] # KeyError: 2 - indexing by values is not applicable in dictionary
+dictSample[1] # to find the value corresponds to key 1
+/
+In [30]:
+range: Indexing
+
+dictSample['second'] # to find the value corresponds to key second
+rangeSample= range(1,12,4) # built-in sequence type used for looping 
+ 
+for x in rangeSample: print(x) # print the values of 'rangeSample'
+rangeSample.index(0) # ValueError: 0 is not in range 
+rangeSample.index(9) # to find index of element 1
+rangeSample[1] # given the index, returns the element 
+/
+In [35]:
+=============================================================================
+Sequence data operations: Slicing
+The slice() constructor creates a slice object representing the set of indices
+specified by range(start, stop, step)
+Syntax: slice(stop), slice(start, stop, step) 
+If a single parameter is passed, start and step are set to None
+Traceback (most recent call last):
+ File "<ipython-input-35-d3bead8072c7>", line 1, in <module>
+ rangeSample[9] # IndexError: range object index out of range
+IndexError: range object index out of range
+rangeSample[9] # IndexError: range object index out of range 
+strSample[slice(4)] # getting substring 'lear' from 'learning'
+strSample[slice(1,4,2)] # getting substring 'er'
+strSample[:] # learning
+lstSample[-3:-1] # ['a', 'sam']
+dictSample[1:'second'] # TypeError: unhashable type: 'slice'
+=============================================================================
+Sequence data operations: Concatenation
+
+=============================================================================
+setSample[1:2] # TypeError: 'set' object is not subscriptable
+arrSample[1:] # array('i', [2, 3, 4])
+arrSample[1:-1] # array('i', [2, 3])
+rangeSample[:-1] # range(1, 9, 4)
+lstSample+['py'] # [1, 2, 'a', 'sam', 2, 'py']
+print(strSample+' ','python') # learning python
+arrSample+[50,60] # TypeError: can only append array (not "list") to array
+arrSample+array('i',[50,60]) # array('i', [1, 2, 3, 4, 50, 60])
+tupSample+=('th','on')
+print(tupSample) # (1, 2, 3, 4, 3, 'py', 'th', 'on')
+setSample=setSample,24 # Converts to tuple with comma separated elements of set, dict, range 
+print(setSample) # ({24, 'data', 'example', 87.5}, 24) 
+/
+Sequence data operations: Multiplication
+Syntax: object*integer
+
+=============================================================================
+END OF SCRIPT
+lstSample*2 # [1, 2, 'a', 'sam', 2, 1, 2, 'a', 'sam', 2]
+lstSample[1]*2 # 4
+lstSample[2]*2 # aa
+tupSample[2:4]*2 # (3, 4, 3, 4) : Concatenate sliced tuple twice
+tupSample[1]/4 # 0.5
+arrSample*2 # array('i', [1, 2, 3, 4, 1, 2, 3, 4])
+strSample*=3 # concatenate thrice
+print(strSample) # learninglearninglearning
+rangeSample*2 # TypeError: unsupported operand type(s) for *: 'range' and 'int'
