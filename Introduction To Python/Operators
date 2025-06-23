@@ -1,0 +1,46 @@
+Operators are special symbols that help in carrying out an assignment operation or arithmetic or logical 
+computation
+Value that the operator operates on 
+is called operand
+
+Arithmetic operators
+Symbol Operation Example
++ Addition  Used to perform mathematical operations between two 
+operands
+
+Assignment Operators(==,+=,/=,*=)
+Relational Operators
+Bitwise Operators
+Logical Operators
+
+Special Operators
+
+Operators
+Unary Operators
++, -, , /, //, * and % are known as operators and these operators can be unary or binary
+A unary operator has only one operand
+The unary - (minus) operator yields the negation of its numeric argument
+The unary + (plus) operator yields its numeric argument unchanged
+The unary ~ (invert) operator yields the bit-wise inversion of its plain or long integer argument
+
+Identity operators
+Identity operators are used to compare if two objects are same with the same memory location
+They are usually used to determine the data type of a variable
+The identity operators are 'is' and 'is not'
+‘is’ operator - evaluates to true if the variables on either side of the operator
+point to the same object and false otherwise
+
+‘is not’ operator - evaluates to false if the variables on either side of the operator
+point to the same object and true otherwise
+
+Membership Operators
+Membership operators are operators used to validate the membership of a value in a sequence
+The membership operators are 'in' and 'not in'
+
+'in' operator - checks if a value exists in a sequence or not
+It evaluates to true if it finds a variable in the specified sequence and false
+otherwise
+
+‘not in’ operator - evaluates to true if it does not find a variable in the specified
+sequence and false otherwise
+
